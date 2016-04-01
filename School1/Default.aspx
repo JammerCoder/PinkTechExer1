@@ -20,10 +20,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="lblLastName" runat="server" Text="Last Name" />
+                        <asp:Label ID="lblGender" runat="server" Text="Gender" />
                     </td>
                     <td>
-                        <asp:TextBox ID="txtLastName" runat="server" ToolTip="Enter Last Name"/>
+                        <asp:TextBox ID="txtGender" runat="server" ToolTip="Enter Male / Female"/>
                     </td>
                 </tr>                            
                 <tr>
