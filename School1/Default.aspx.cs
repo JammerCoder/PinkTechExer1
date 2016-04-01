@@ -16,16 +16,38 @@ namespace School1
 
         protected void btnCombine_Click(object sender, EventArgs e)
         {
-            //this.lblResult.Text = this.txtFirstName.Text + " " + this.txtGender.Text;
+            ////this.lblResult.Text = this.txtFirstName.Text + " " + this.txtGender.Text;
+            //if (this.txtGender.Text.ToUpper() == "MALE")
+            //{
+            //    this.lblResult.Text = "Hello, Sir " + this.txtFirstName.Text + "." ;
+            //}
+            //else
+            //{
+            //    this.lblResult.Text = "Hello, Ma'am " + this.txtFirstName.Text + ".";
+            //}
 
-            if (this.txtGender.Text.ToUpper() == "MALE")
+            try
             {
-                this.lblResult.Text = "Hello, Sir " + this.txtFirstName.Text + "." ;
+                switch (this.txtGender.Text.ToUpper())
+                {
+                    case "MALE":
+                        this.lblResult.Text = "Hello, Sir " + this.txtFirstName.Text + ".";
+                        break;
+
+                    case "FEMALE":
+                        this.lblResult.Text = "Hello, Ma'am " + this.txtFirstName.Text + "."; 
+                        break;
+
+                    default:
+                        this.lblResult.Text = this.txtFirstName.Text + ", please specify your gender.";
+                        break;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                this.lblResult.Text = "Hello, Ma'am " + this.txtFirstName.Text + ".";
+                this.lblResult.Text = ex.Message;
             }
+            
         }
     }
 }
